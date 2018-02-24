@@ -1,6 +1,6 @@
 /**
  * @file Determines whether two values are the same value.
- * @version 1.0.0
+ * @version 1.0.1
  * @author Xotic750 <Xotic750@gmail.com>
  * @copyright  Xotic750
  * @license {@link <https://opensource.org/licenses/MIT> MIT}
@@ -37,9 +37,5 @@ module.exports = function sameValue(value1, value2) {
     return true;
   }
 
-  if (numberIsNaN(value1) && numberIsNaN(value2)) {
-    return true;
-  }
-
-  return false;
+  return numberIsNaN(value1) && numberIsNaN(value2);
 };
