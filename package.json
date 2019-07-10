@@ -1,6 +1,6 @@
 {
   "name": "same-value-x",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Determines whether two values are the same value.",
   "homepage": "https://github.com/Xotic750/same-value-x",
   "author": {
@@ -22,7 +22,7 @@
   ],
   "browser": "dist/same-value-x.min.js",
   "module": "src/same-value-x.js",
-  "main": "src/same-value-x.js",
+  "main": "dist/same-value-x.js",
   "scripts": {
     "build:base": "webpack --bail --progress --profile --colors",
     "build": "cross-env NODE_ENV=production npm run build:base --",
@@ -49,7 +49,7 @@
     "url": "https://github.com/Xotic750/same-value-x/issues"
   },
   "dependencies": {
-    "is-nan-x": "^2.0.0"
+    "is-nan-x": "^2.0.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.0",
