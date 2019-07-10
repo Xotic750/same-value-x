@@ -21,34 +21,33 @@
 <a name="module_same-value-x"></a>
 
 ## same-value-x
+
 Determines whether two values are the same value.
 
-**Version**: 1.0.1  
-**Author**: Xotic750 <Xotic750@gmail.com>  
-**License**: [MIT](&lt;https://opensource.org/licenses/MIT&gt;)  
-**Copyright**: Xotic750  
 <a name="exp_module_same-value-x--module.exports"></a>
 
 ### `module.exports(value1, value2)` ⇒ <code>boolean</code> ⏏
+
 This method is the comparison abstract operation SameValue(x, y), where x
 and y are ECMAScript language values, produces true or false.
 
 **Kind**: Exported function  
 **Returns**: <code>boolean</code> - A Boolean indicating whether or not the two arguments are
- the same value.  
+the same value.
 
-| Param | Type | Description |
-| --- | --- | --- |
-| value1 | <code>\*</code> | The first value to compare. |
+| Param  | Type            | Description                  |
+| ------ | --------------- | ---------------------------- |
+| value1 | <code>\*</code> | The first value to compare.  |
 | value2 | <code>\*</code> | The second value to compare. |
 
-**Example**  
-```js
-var sameValue = require('same-value-x');
+**Example**
 
-sameValue(1, 1); // true
-sameValue(true, true); // true
-sameValue(NaN, NaN); // true
-sameValue(true, false); // false
-sameValue(0, -0); // false
+```js
+import sameValue from 'same-value-x';
+
+console.log(sameValue(1, 1)); // true
+console.log(sameValue(true, true)); // true
+console.log(sameValue(NaN, NaN)); // true
+console.log(sameValue(true, false)); // false
+console.log(sameValue(0, -0)); // false
 ```
