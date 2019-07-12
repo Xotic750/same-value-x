@@ -1,13 +1,14 @@
 /*!
 {
+  "author": "Graham Fairweather",
   "copywrite": "Copyright (c) 2017-present",
-  "date": "2019-07-10T12:27:19.549Z",
+  "date": "2019-07-12T12:05:45.144Z",
   "describe": "",
   "description": "Determines whether two values are the same value.",
   "file": "same-value-x.js",
-  "hash": "b0297d00db390cc951a8",
+  "hash": "7472724c727e9386d84b",
   "license": "MIT",
-  "version": "2.0.2"
+  "version": "2.0.3"
 }
 */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -124,19 +125,28 @@ return /******/ (function(modules) { // webpackBootstrap
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+
+// CONCATENATED MODULE: ./node_modules/is-nan-x/dist/is-nan-x.esm.js
+/**
+ * This method determines whether the passed value is NaN and its type is
+ * `Number`. It is a more robust version of the original, global isNaN().
+ *
+ * @param {*} [value] - The value to be tested for NaN.
+ * @returns {boolean} `true` if the given value is NaN and its type is Number;
+ *  otherwise, `false`.
+ */
+function is_nan_x_esm_isNaN(value) {
+  /* eslint-disable-next-line no-self-compare */
+  return value !== value;
+}
 
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = sameValue;
-
-var _isNanX = _interopRequireDefault(__webpack_require__(1));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+// CONCATENATED MODULE: ./dist/same-value-x.esm.js
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return sameValue; });
 
 /**
  * This method is the comparison abstract operation SameValue(x, y), where x
@@ -147,6 +157,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * @returns {boolean} A Boolean indicating whether or not the two arguments are
  *  the same value.
  */
+
 function sameValue(value1, value2) {
   if (value1 === 0 && value2 === 0) {
     return 1 / value1 === 1 / value2;
@@ -156,53 +167,9 @@ function sameValue(value1, value2) {
     return true;
   }
 
-  return (0, _isNanX.default)(value1) && (0, _isNanX.default)(value2);
+  return is_nan_x_esm_isNaN(value1) && is_nan_x_esm_isNaN(value2);
 }
 
-/***/ }),
-/* 1 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function(global) {/*!
-{
-  "copywrite": "Copyright (c) 2017-present",
-  "date": "2019-07-10T12:24:18.155Z",
-  "describe": "",
-  "description": "ES6-compliant shim for Number.isNaN - the global isNaN returns false positives.",
-  "file": "is-nan-x.min.js",
-  "hash": "856a0137b414d1082716",
-  "license": "MIT",
-  "version": "2.0.3"
-}
-*/
-!function(e,t){ true?module.exports=t():undefined}(function(){"use strict";return"undefined"!=typeof self?self:"undefined"!=typeof window?window:"undefined"!=typeof global?global:Function("return this")()}(),function(){return function(e){var t={};function n(r){if(t[r])return t[r].exports;var o=t[r]={i:r,l:!1,exports:{}};return e[r].call(o.exports,o,o.exports,n),o.l=!0,o.exports}return n.m=e,n.c=t,n.d=function(e,t,r){n.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:r})},n.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},n.t=function(e,t){if(1&t&&(e=n(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var r=Object.create(null);if(n.r(r),Object.defineProperty(r,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var o in e)n.d(r,o,function(t){return e[t]}.bind(null,o));return r},n.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return n.d(t,"a",t),t},n.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},n.p="",n(n.s=0)}([function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.default=function(e){return e!=e}}])});
-//# sourceMappingURL=is-nan-x.min.js.map
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports) {
-
-var g;
-
-// This works in non-strict mode
-g = (function() {
-	return this;
-})();
-
-try {
-	// This works if eval is allowed (see CSP)
-	g = g || new Function("return this")();
-} catch (e) {
-	// This works if the window reference is available
-	if (typeof window === "object") g = window;
-}
-
-// g can still be undefined, but nothing to do about it...
-// We return undefined, instead of nothing here, so it's
-// easier to handle this case. if(!global) { ...}
-
-module.exports = g;
 
 
 /***/ })
