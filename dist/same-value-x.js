@@ -2,13 +2,13 @@
 {
   "author": "Graham Fairweather",
   "copywrite": "Copyright (c) 2017-present",
-  "date": "2019-07-15T10:31:16.656Z",
+  "date": "2019-07-16T10:07:26.780Z",
   "describe": "",
   "description": "Determines whether two values are the same value.",
   "file": "same-value-x.js",
   "hash": "7472724c727e9386d84b",
   "license": "MIT",
-  "version": "2.0.8"
+  "version": "2.0.9"
 }
 */
 (function webpackUniversalModuleDefinition(root, factory) {

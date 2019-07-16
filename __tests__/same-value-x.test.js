@@ -1,6 +1,5 @@
 import sameValue from 'src/same-value-x';
 
-/* eslint-disable-next-line compat/compat */
 const hasSymbols = typeof Symbol === 'function' && typeof Symbol('') === 'symbol';
 const itHasSymbols = hasSymbols ? it : xit;
 
@@ -57,11 +56,11 @@ describe('sameValue', function() {
 
   itHasSymbols('Symbols', function() {
     expect.assertions(3);
-    /* eslint-disable-next-line compat/compat */
+
     expect(sameValue(Symbol.iterator, Symbol.iterator)).toBe(true, 'Symbol.iterator sameValue itself');
-    /* eslint-disable-next-line compat/compat */
+
     expect(sameValue(Symbol(''), Symbol(''))).toBe(false, 'different Symbols are not equal');
-    /* eslint-disable-next-line compat/compat */
+
     expect(sameValue(Symbol.iterator, Object(Symbol.iterator))).toBe(false, 'Symbol.iterator sameValue not boxed form of itself');
   });
 });
