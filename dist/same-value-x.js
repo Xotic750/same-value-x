@@ -2,13 +2,13 @@
 {
   "author": "Graham Fairweather",
   "copywrite": "Copyright (c) 2017-present",
-  "date": "2019-07-17T13:29:14.645Z",
+  "date": "2019-07-17T17:15:22.319Z",
   "describe": "",
   "description": "Determines whether two values are the same value.",
   "file": "same-value-x.js",
-  "hash": "975762faeb50a6fd5604",
+  "hash": "b365a1815caec1648c1a",
   "license": "MIT",
-  "version": "2.0.12"
+  "version": "2.0.13"
 }
 */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -139,10 +139,12 @@ __webpack_require__.r(__webpack_exports__);
  * @returns {boolean} `true` if the given value is NaN and its type is Number;
  *  otherwise, `false`.
  */
-function is_nan_x_esm_isNaN(value) {
+var is_nan_x_esm_isNaN = function isNaN(value) {
   /* eslint-disable-next-line no-self-compare */
   return value !== value;
-}
+};
+
+/* harmony default export */ var is_nan_x_esm = (is_nan_x_esm_isNaN);
 
 
 // CONCATENATED MODULE: ./dist/same-value-x.esm.js
@@ -166,7 +168,7 @@ var same_value_x_esm_sameValue = function sameValue(value1, value2) {
     return true;
   }
 
-  return is_nan_x_esm_isNaN(value1) && is_nan_x_esm_isNaN(value2);
+  return is_nan_x_esm(value1) && is_nan_x_esm(value2);
 };
 
 /* harmony default export */ var same_value_x_esm = __webpack_exports__["default"] = (same_value_x_esm_sameValue);
