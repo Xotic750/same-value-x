@@ -9,7 +9,7 @@ import numberIsNaN from 'is-nan-x';
  *  the same value.
  */
 
-export default function sameValue(value1, value2) {
+var sameValue = function sameValue(value1, value2) {
   if (value1 === 0 && value2 === 0) {
     return 1 / value1 === 1 / value2;
   }
@@ -19,6 +19,8 @@ export default function sameValue(value1, value2) {
   }
 
   return numberIsNaN(value1) && numberIsNaN(value2);
-}
+};
+
+export default sameValue;
 
 //# sourceMappingURL=same-value-x.esm.js.map

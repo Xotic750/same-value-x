@@ -2,11 +2,11 @@
 {
   "author": "Graham Fairweather",
   "copywrite": "Copyright (c) 2017-present",
-  "date": "2019-07-16T20:58:41.864Z",
+  "date": "2019-07-17T13:00:38.994Z",
   "describe": "",
   "description": "Determines whether two values are the same value.",
   "file": "same-value-x.js",
-  "hash": "7472724c727e9386d84b",
+  "hash": "975762faeb50a6fd5604",
   "license": "MIT",
   "version": "2.0.11"
 }
@@ -146,7 +146,6 @@ function is_nan_x_esm_isNaN(value) {
 
 
 // CONCATENATED MODULE: ./dist/same-value-x.esm.js
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return sameValue; });
 
 /**
  * This method is the comparison abstract operation SameValue(x, y), where x
@@ -158,7 +157,7 @@ function is_nan_x_esm_isNaN(value) {
  *  the same value.
  */
 
-function sameValue(value1, value2) {
+var same_value_x_esm_sameValue = function sameValue(value1, value2) {
   if (value1 === 0 && value2 === 0) {
     return 1 / value1 === 1 / value2;
   }
@@ -168,7 +167,9 @@ function sameValue(value1, value2) {
   }
 
   return is_nan_x_esm_isNaN(value1) && is_nan_x_esm_isNaN(value2);
-}
+};
+
+/* harmony default export */ var same_value_x_esm = __webpack_exports__["default"] = (same_value_x_esm_sameValue);
 
 
 
