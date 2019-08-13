@@ -2,7 +2,7 @@
 {
   "author": "Graham Fairweather",
   "copywrite": "Copyright (c) 2017-present",
-  "date": "2019-08-13T10:59:54.976Z",
+  "date": "2019-08-13T12:44:22.313Z",
   "describe": "",
   "description": "Determines whether two values are the same value.",
   "file": "same-value-x.js",
