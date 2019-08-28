@@ -1,6 +1,6 @@
 {
   "name": "same-value-x",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Determines whether two values are the same value.",
   "homepage": "https://github.com/Xotic750/same-value-x",
   "author": {
@@ -51,7 +51,7 @@
     "url": "https://github.com/Xotic750/same-value-x/issues"
   },
   "dependencies": {
-    "is-nan-x": "^2.1.0"
+    "is-nan-x": "^2.1.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",
